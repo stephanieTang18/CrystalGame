@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="assets/javascript/game.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
     <title>Crystal Game</title>
 </head>
 <body>
    
     <h1>Crystal Collector</h1>
 
+    <!-- Game instructions-->
     <div>
     <h3>Here's how you play the game</h3>
 
     <ol>
         <li>You will be given a random numebr at the start of the game. "Number to get". </li>
         <li>There are four crystals below.</li>
-        <ul>
-            <li>Blue</li>
-            <li>Green</li>
-            <li>Red</li>
-            <li>Yellow</li>
-        </ul>
+
+        <!--these are all the crystal images -->
+        <div>
+            <img src="assets/images/blue.png" alt="Blue Crystal" id="blue">
+            <img src="assets/images/green.png" alt="Green Crystal" id="green">
+            <img src="assets/images/red.png" alt="Red Crystal" id="red">
+            <img src="assets/images/yellow.png" alt="Yellow Crystal" id="yellow">
+        </div>
+
         <li>By clicking on a crystal, you will add a specific amount of points to your total score.</li>
         <li>You win the game by matching your total score to the random number.</li>
         <li>You lose the game if your total score goes above the random number.</li>
@@ -30,14 +36,22 @@
     </ol>
     </div>
 
+    <!-- Number to win the game -->
     <div>
-        <h2>Numnber to Get:</h2>
+        <h2>Number to Get: <span id="randomNumber"></span></h2>
     </div>
 
+    <!-- Wins and Losses -->
     <div>
-        <h2>Wings</h2>
+        <h2>Wins: <span id="numbnerOfWins"></span></h2>
+        <h2>Losses: <span id="numberOfLosses"></span></h2>
     </div>
 
+    <!-- Final Total -->
+    <div id="userTotal">
+        <h2>Final Toal: <span id="finalTotal"></span></h2>
+    </div>
+    
 
         
     
